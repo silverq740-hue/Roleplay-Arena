@@ -2,9 +2,17 @@ const express = require("express");
 const router = express.Router();
 const OpenAI = require("openai");
 
+// Initialize OpenAI
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+// Log a confirmation that the API key is set
+if (!process.env.OPENAI_API_KEY) {
+  console.error("⚠️ OPENAI_API_KEY is missing!");
+} else {
+  console.log("✅ OpenAI initialized successfully with API key.");
+}
 
 router.post("/", async (req, res) => {
   try {
