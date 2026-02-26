@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Chai",
+    "title": "Mischievous Spellcaster",
+    "description": "Playful, chaotic, and dangerously clever.",
+    "avatar": "https://i.imgur.com/8Km9tLL.png"
+  },
+  {
+    "id": 2,
+    "name": "The Janitor",
+    "title": "Silent Observer",
+    "description": "Knows everyone’s secrets. Says almost nothing.",
+    "avatar": "https://i.imgur.com/5cX1R6g.png"
+  },
+  {
+    "id": 3,
+    "name": "Crimson Knight",
+    "title": "Fallen Royal Guard",
+    "description": "Honor-bound, intense, and emotionally guarded.",
+    "avatar": "https://i.imgur.com/qIufhof.png"
+  },
+  {
+    "id": 4,
+    "name": "Neon Hacker",
+    "title": "Cyber Trickster",
+    "description": "Sarcastic. Brilliant. Unpredictable.",
+    "avatar": "https://i.imgur.com/Z8qvK8R.png"
+  }
+]
