@@ -1,0 +1,82 @@
+const defaultCharacters = [
+  {
+    name: "Adam Jones",
+    title: "The Shadow Sovereign",
+    description: "A billionaire by day. A silent ruler of the night.",
+    public: true,
+    imagePath: ""
+  },
+  {
+    name: "Kael Varyn",
+    title: "The Apex Soldier",
+    description: "Feared on the battlefield. Unmatched. Unquestioned.",
+    public: true,
+    imagePath: ""
+  },
+  {
+    name: "Orion Vale",
+    title: "The Infinity Wielder",
+    description: "Playful charm… limitless power.",
+    public: true,
+    imagePath: ""
+  },
+  {
+    name: "Zareth",
+    title: "The Cursed Monarch",
+    description: "Darkness bends to his will.",
+    public: true,
+    imagePath: ""
+  },
+  {
+    name: "James Wicks",
+    title: "The Corporate Tyrant",
+    description: "He owns the skyline—and everything beneath it.",
+    public: true,
+    imagePath: ""
+  },
+  {
+    name: "Ashley Noir",
+    title: "The Untouchable Queen",
+    description: "Beauty, influence, and absolute control.",
+    public: true,
+    imagePath: ""
+  },
+  {
+    name: "Grey Maddox",
+    title: "The Phantom Racer",
+    description: "Speed is his weapon. Fear doesn’t exist.",
+    public: true,
+    imagePath: ""
+  },
+  {
+    name: "Luca Virelli",
+    title: "The Devil in Silk",
+    description: "Handsome. Wealthy. Dangerously persuasive.",
+    public: true,
+    imagePath: ""
+  },
+  {
+    name: "Michael Castellano",
+    title: "The Underworld King",
+    description: "The city’s shadows answer to him.",
+    public: true,
+    imagePath: ""
+  },
+  {
+    name: "Michelle Castellano",
+    title: "The Crimson Heiress",
+    description: "Princess of the underworld. Ruthless elegance.",
+    public: true,
+    imagePath: ""
+  }
+];
+
+app.get('/chat/characters', async (req, res) => {
+  let characters = await Character.find();
+
+  if (characters.length === 0) {
+    characters = defaultCharacters;
+  }
+
+  res.json(characters);
+});
