@@ -6,28 +6,40 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Landing -->
-  <div class="landing">
-    <h1>Roleplay Arena</h1>
-    <p>Enter your world…</p>
+  <!-- Landing screen -->
+  <div class="landing hidden">
+    <h1>Welcome to Roleplay Arena</h1>
   </div>
 
-  <!-- Character Grid -->
-  <div class="character-grid hidden">
-    <div id="spotlight">
-      <h2>Spotlight</h2>
-      <div id="spotlight-card"></div>
-    </div>
-    <div id="characters"></div>
+  <!-- Character grid -->
+  <div class="character-selection">
+    <div id="character-grid"></div>
+    <button id="create-char" class="nav-button">+</button>
   </div>
 
-  <!-- Bottom Navigation -->
-  <nav class="nav-buttons">
+  <!-- Custom character creation -->
+  <div class="custom-char hidden">
+    <input type="text" id="char-name" placeholder="Character Name">
+    <input type="file" id="char-image">
+    <label><input type="checkbox" id="char-public"> Make Public</label>
+    <button id="save-char">Save Character</button>
+  </div>
+
+  <!-- Chat container -->
+  <div class="chat-container hidden">
+    <h2 id="current-char"></h2>
+    <div id="chat-box"></div>
+    <input type="text" id="chat-input" placeholder="Type your message...">
+    <button id="send-btn">Send</button>
+  </div>
+
+  <!-- Bottom navigation -->
+  <div class="bottom-nav">
     <button id="nav-grid">Characters</button>
     <button id="nav-search">Search</button>
     <button id="nav-create">Create</button>
     <button id="nav-profile">Profile</button>
-  </nav>
+  </div>
 
   <script src="app.js"></script>
 </body>
